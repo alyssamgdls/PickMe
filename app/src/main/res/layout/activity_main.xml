@@ -5,22 +5,6 @@
     android:layout_height="match_parent"
     tools:context="com.magdales.pickme.MainActivity">
 
-    <ImageView
-        android:id="@+id/camera_photo"
-        android:layout_width="200dp"
-        android:layout_height="180dp"
-        android:src="@drawable/camera"
-        android:scaleType="fitCenter"
-        android:layout_centerInParent="true"/>
-
-    <TextView
-        android:id="@+id/camera_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pick_a_photo_text"
-        android:layout_below="@id/camera_photo"
-        android:layout_centerHorizontal="true"/>
-
     <Button
         android:id="@+id/share_button"
         android:layout_width="328dp"
@@ -29,8 +13,26 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="30dp"
         android:background="#12913E"
-        android:text="Share"
-        android:visibility="invisible"/>
+        android:text="@string/share_buttone_text"
+        android:visibility="invisible"
+        android:onClick="sharePhoto"/>
+
+    <ImageView
+        android:id="@+id/camera_photo"
+        android:layout_width="200dp"
+        android:layout_height="180dp"
+        android:src="@drawable/camera"
+        android:scaleType="fitCenter"
+        android:layout_centerInParent="true"
+        android:onClick="pickPhoto"/>
+
+    <TextView
+        android:id="@+id/camera_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pick_a_photo_text"
+        android:layout_below="@id/camera_photo"
+        android:layout_centerHorizontal="true"/>
 
     <ImageView
         android:id="@+id/viewed_photo"
